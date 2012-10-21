@@ -8,6 +8,6 @@ package org.jRecommend;
  *
  * @author akshay
  */
-public class hmm {
+public class HMM {
     
 }
