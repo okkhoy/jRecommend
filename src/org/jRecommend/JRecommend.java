@@ -16,6 +16,11 @@ public class JRecommend {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello!!");
-        System.out.println("Adding a new line to test!");
+                
+        System.out.println("On adding we get, " + addition(2,4));
+    }
+    
+    static int addition(int a, int b){
+       return a+b; 
     }
 }
