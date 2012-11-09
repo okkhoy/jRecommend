@@ -1,0 +1,703 @@
+abap
+developer
+academic
+business executive
+collector
+account
+actionscript
+actuarial
+actuary
+adjudicate
+administrative
+admissions
+advertising
+aerospace engineer
+air condition
+air traffic
+aircraft
+airframe
+airline
+aix
+anesthesia
+anesthetist
+animal care
+announcer
+antenna engineer
+lease 
+property manager
+appraisal
+appraiser
+aquatic
+architectur
+archivist
+armed service
+art
+artist
+as400
+asbestos worker
+ase
+asp.net
+manager
+athletic
+atm technician
+attorney
+audio
+audio visual
+audiologist
+audit
+auto
+auto shop
+auto technician
+autocad
+automation
+automotive
+avaya
+aviation
+avionic
+b2b
+baker
+bank manager
+banker
+banking
+banquet
+barber
+bartender
+beautician
+behavioral
+benefits
+billing
+bindery
+biochemist
+biologist
+biomedical
+biostatistician
+body shop
+boiler
+bookkeeper
+brick
+broadband
+broadcast
+broker
+budget
+build
+bus driver
+business
+butcher
+c#
+c++
+cable
+cad
+calibration
+call center
+camera operator
+campaign manager
+campus
+cardiac
+cardiology
+career services
+carpenter
+cashier
+casino
+casualty
+cater
+cath lab
+cdl
+phlebotomy
+chaplain
+chauffeur
+chef
+chemical
+chemist
+psychiatrist
+psychologist
+therapist
+childcare
+children care
+children welfare
+chiropract
+choreographer
+circulation manager
+cisco
+citrix
+civil
+claim
+clerical
+clerk
+client relation
+clinical 
+laboratory
+cmm
+cna
+cnc
+cobol
+cognos
+collection
+combat
+commission
+commodity
+community coordinator
+community development 
+community service
+compensation
+compliance
+compressor 
+computer
+computer repair
+computer support
+computer system
+computer technician
+concrete worker
+construction
+content 
+content writer
+control engineer
+cook
+copy assistant
+copy clerk
+copywriter
+core driller
+corrosion
+cosmetic
+cosmetolog
+cost
+costume designer
+counselor
+courier
+court
+cpc 
+coder
+crane
+credit
+criminal justice
+critical care
+crm
+curriculum
+custodian
+customer account
+customer care
+customer relation
+customer service
+customer support
+damage adjuster
+dancer
+data analyst
+data architect
+database
+data-entry
+daycare
+dba
+defense
+delivery
+dental
+dentist
+dermatologist
+design
+desk
+desktop support
+detention officer
+diagnostic 
+medical 
+sonographer
+dialysis
+die maker
+diesel
+diet
+digital design
+disc jockey
+dishwasher
+dispatch
+distribution
+dj
+dock
+doctor
+dog trainer
+door service
+doorman
+dosimetrist
+drafter
+draftsman
+drill
+driver
+dsp
+echo
+echocardiograph
+economic
+economist
+editor
+education
+educator
+eeg
+ekg
+electrical
+electrician
+electro mechanical
+electromechanical
+electronic
+embedded
+embosser
+embroidery
+emergency medical
+employee relation
+emt
+endocrinologist
+energy
+engineer
+english
+engraver
+enrollment
+environment
+equipment
+equity
+erp
+escrow
+esl
+essbase
+esthetic
+estimat
+etl
+event plan
+event manager
+exercise
+export
+facility
+faculty
+failure analysis
+farm
+farmer
+fashion
+film editor
+finance
+financial
+financial reporting
+fire engineer
+fire fighter
+firefighter
+fireman
+firewall
+firmware
+fitness
+flash
+flatbed driver
+flight
+floor manager
+floor supervisor
+floral
+florist
+food
+food production
+food service
+coach
+forensic
+forestry
+fork lift
+forklift
+franchise
+freight
+front desk
+fuel
+fundraising
+game
+gardener
+gas technician
+geologi
+geophy
+geotech
+geriatric nursing
+gis
+golf
+government
+graduate
+research
+graphic design
+greeter
+grinder operator
+grocery
+groundskeeper
+guest service
+hairdresser
+hairstylist
+hardware
+hazardous material
+hazmat
+health
+healthcare
+hearing
+heavy equipment
+help desk
+histology
+historian
+history
+histotechnologist
+home builder
+home health
+horse trainer
+hospice
+hospital
+hotel
+housekeep
+hr
+hris
+human resource
+human service
+hvac
+hydraulic
+hydrogeologist
+hygien
+hyperion
+icu
+import
+import/export
+industrial
+industrial sales
+informatica
+information technology
+infrastructure
+infusion
+inside sales
+installation
+insurance
+integration
+intellectual property
+interior design
+auditor
+internist
+inventory
+investment
+iphone
+ironworker
+irrigation
+jailer
+janitor
+java
+javascript
+jewelry
+journalist
+juris doctor
+kennel attendant
+kindergarten
+kitchen
+labor
+lan admin
+land
+surveyor
+landscape
+language
+lathe
+law
+lease
+legal
+legislative
+librarian
+library
+lifeguard
+linguist
+linux
+litigation
+load
+locksmith
+logistic
+loss mitigation
+loss prevention
+lot attendant
+lpn
+lube technician
+lvn
+machinist
+macromedia
+maid
+mail
+mainframe
+maintenance
+makeup
+mammography
+manicur
+manufacturing
+marine
+market research
+market sales
+marketing
+marriage
+family
+massage therapist
+material
+math
+mechanic
+media relation
+medical
+medicare
+medication
+medicine
+coordinator
+mental health
+merchandising
+metal
+metallurg
+meteorologist
+microbio
+microwave
+midwife
+military
+mill
+mine
+mining engineer
+mobile
+mold
+molecular bio
+mortgage
+motor
+mri
+multimedia
+music
+mysql
+.net
+nanny
+navy
+network
+neurologist
+news
+non commission
+nonprofit
+nuclear
+nurse
+nursing
+obstetrician
+occupational therapist
+office assistant
+security guard
+offset print
+oil
+oncolog
+operation
+ophthalmic
+optical
+optometri
+oracle
+orthodont
+otr driver
+packaging
+paint
+paralegal
+paramedic
+pastor
+patent
+pathologist
+patient care
+pattern maker
+paver operator
+payroll
+pbx
+pediatric
+peoplesoft
+perioperative
+perl
+personal care
+personnel
+pest technician
+petroleum
+pharma
+phlebotom
+phone operator
+photo
+php
+python
+physical
+physician
+physicist
+physics
+pilot
+pipe
+piping
+plant
+plastic engineer
+plc
+plumb
+police
+policy analyst
+pool attendant
+pool technician
+porter
+portfolio
+power
+press
+print
+process
+procurement
+product marketing
+production
+professor
+program manager
+promotions
+proofreader
+property
+propulsion engineer
+prosthetic
+psych
+public relations
+purchas
+nurs
+nutrition
+quality
+radar engineer
+radar technician
+radiation therapist
+radio operator
+radiographer
+radiolo
+reactor operator
+real estate
+realtor
+receptionist
+recreation
+recruit
+rehab
+reimbursement
+reliability engineer
+repair
+report
+reservation
+respiratory
+restaurant
+retail
+retirement
+revenue
+rig operator
+risk analyst
+risk manager
+roadway
+roof contractor
+roofer
+room service
+route sales
+safety
+sales
+salesperson
+salon
+sap
+sas
+secretarys
+security architect
+security engineer
+selling
+seo manager
+server
+service engineer
+sharepoint
+sheet metal
+sheriff
+shipping
+shoe designer
+shop manager
+soa
+social worker
+software 
+support
+test
+trainer
+soil technician
+solaris administrator
+solder technician
+solution architect
+sound engineer
+sous chef
+sox analyst
+spa
+speech
+sport
+spray technician
+sprinkler fitter
+sql
+statistic
+steam engineer
+stock
+stockroom
+stone mason
+store
+strateg
+structural
+student
+studio
+photographer
+substance abuse counselor
+supply chain
+supply
+surgery
+surgical assistant
+surgical
+survey
+swim
+switchboard
+sybase
+system admin
+system
+tax
+tax consultant
+taxi driver
+teacher
+technical
+tech writer
+technician
+technology instructor
+technology specialist
+telecom
+telemarketing
+telemetry
+telephony
+telesales
+teller
+theater
+therap
+ticketing
+tool maker
+tourdriver
+trade
+trademark
+traffic engineer
+training
+transcriptionist
+transplant coordinator
+transport
+travel
+treatment plant operator
+tree trimmer
+trial attorney
+truck driver
+typist
+ultrasound
+underwriter
+unit clerk
+unit secretary
+unix
+unload supervisor
+urban planner
+utilization
+valet
+vascular 
+vb
+vehicle
+vet
+video
+videographer
+visual basic
+visual designer
+vocational counselor
+waiter
+waitress
+warehouse
+wastewater
+water resource
+web
+graphic designer
+web service 
+weblogic
+websphere 
+weld
+wellness 
+wind
+windows
+wine 
+wireless 
+woodworker
+word processing
+writer
+x-ray 
+youth counselor
