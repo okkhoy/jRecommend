@@ -173,6 +173,7 @@ class ahoCorasick:
 			for string in itr:
 			    print string
 
+'''
 if (__name__ == "__main__"):
 
 	x = ahoCorasick()
@@ -222,3 +223,4 @@ if (__name__ == "__main__"):
 	      experience</p>\r<p>Strong Microsoft Office skills </p>\r<p>Ability to work with an appropriate sense of urgency and drive for results. </p>\r<p>Must be well \
 	      organized with the ability to handle multiple assignments and prioritize appropriately. </p>\r<p><b><br />\r</b>&nbsp;</p>	Charlotte	NC	US	28217	2012-03-\
 	      21 02:03:44.137	2012-04-20 23:59:59 7	1	P/T HUMAN RESOURCES ASSISTANT	<b>    <b> P/T HUMAN RESOURCES ASSISTANT')	 								 
+'''

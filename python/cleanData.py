@@ -48,8 +48,7 @@ The job_seen is declared as a set. This is to ensure there is no duplication.
 job_seen = set()
 for line in open("/media/SHARE/NUS/JobRecoData_ForTesting/jobTitles.txt", "r"):
     if line not in job_seen: 														# not a duplicate
-        outfile.write(line)
-        lines_seen.add(line)
+        job_seen.add(line)
 
 '''
 This super awesome line converts all spaces in the job titles read from the file into underscores.
@@ -73,6 +72,8 @@ with open("/media/SHARE/NUS/JobRecoData/jobs1.tsv", "r") as infile:
 	kwMatch = ahoCorasick()
 	kwMatch.addKeyword(jobTitles)
 	
+	kwMatch.setFailTransitions()
+	
 	# Write a new header to the output file
 	writer.writerow(("JobId", "WindowId", "Title","Requirement","City", "Latitude", "Longitude", "StartDate", "EndDate"))
 	
@@ -80,10 +81,15 @@ with open("/media/SHARE/NUS/JobRecoData/jobs1.tsv", "r") as infile:
 		(Jobid, WindowId, Title, Description, Requirements, City, State, Country, Zip5, StartDate, EndDate) = line
 		if City.lower() not in cityCode.keys():
 			continue
-		jobKeywords = kwMatch("_".join(Description.split()))
-		jobKeywords.union(kwMatch("_".join(Requirements.split())))
-		print Jobid, WindowId, Title.lower(), "|".join(list(jobKeywords)).lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate
-		writer.writerow( Jobid, WindowId, Title.lower(), "|".join(list(jobKeywords)).lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate)
+			
+		#tempJobDesc = '_'.join(Description.split()).lower()
+		#jobKeywords = kwMatch.findSubstrings(tempJobDesc)
+		tempJobReq = '_'.join(Requirements.split())
+		jobKeywords = kwMatch.findSubstrings(tempJobReq)
+		print jobKeywords, '\n\n'
+		#jobReqList = '|'.join(list(jobKeywords)).lower()
+		#print Jobid, WindowId, Title.lower(), jobReqList, City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate
+		#writer.writerow( Jobid, WindowId, Title.lower(), "|".join(list(jobKeywords)).lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate)
 		cityJobs[City.lower()] = cityJobs[City.lower()] + 1 # increment the number of jobs in the particular city
 		
 		
