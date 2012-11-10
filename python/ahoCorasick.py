@@ -113,6 +113,7 @@ class ahoCorasick:
 
 ##--------------------------------------------------------------------------------------------------
 	def findSubstrings(self, findStr):
+		keywords = set()
 		""" Finds all substrings of input which are keywords in the tree"""
 		#for string in findStr.split(' '):
 		for string in findStr.split(' '):
@@ -136,8 +137,9 @@ class ahoCorasick:
 			            #print j
 			            itr = iter(child.outputSet)
 			            for keyw in itr:
-			                print keyw
-			    j = j + 1    
+			            	keywords.add(keyw)
+			    j = j + 1    	
+		return keywords
 			        
 
 ##---------------------------------------------------------
@@ -186,7 +188,7 @@ if (__name__ == "__main__"):
 	x.addKeyword(keywords)
 	
 	x.setFailTransitions()
-	x.findSubstrings('TMR, Inc. is an Equal Employment Opportunity Company</p>\r<p>For more job opportunities with TMR, visit our website <a href="http:// \
+	kw = x.findSubstrings('_'.join('TMR, Inc. is an Equal Employment Opportunity Company</p>\r<p>For more job opportunities with TMR, visit our website <a href="http:// \
 	 								www.tmrhq.com/">www.tmrhq.com</a></p>\r<p>Send Resumes to HR@tmrhq2.com</p>\r<p>&nbsp;</p>\r<p>JOB SUMMARY:</p>\r<p>&nbsp;</p>\r \
 	 								<p>Leads the customer&rsquo;s overall Cyber Security strategy, formalizes service offerings consisted with ITIL best practices, and provides design \
 	 								and architecture support.</p>\r<p>&nbsp;</p>\r<ul>\r    <li>Provide security design / architecture support for OJP&rsquo;s IT Security Division (ITSD) \
@@ -204,8 +206,10 @@ if (__name__ == "__main__"):
 	 								 scanning and vulnerability mapping tools.&nbsp; </p>\r<p>&nbsp;</p>\r<p>&nbsp;</p>\r<p>DESIRABLE SKILLS:</p>\r<p>&nbsp;</p>\r<p>CISSP and/or \
 	 								 related Certifications</p>\r<p>&nbsp;</p>\r<p>EDUCATION AND YEARS OF EXPERIENCE:</p>\r<p>&nbsp;</p>\r<p>BS Computer Science or related \
 	 								 discipline; minimum of 8 years in IT Security; minimum 4 years in Senior/Lead position</p>\r<p>&nbsp;</p>\r<p><a href="https://www.tmrhq.com/\
-	 								 jobapplicationstep1.aspx">')
-	x.findSubstrings('coordinate, prepare and facilitate requirements gathering sessions. </p>\r<p>Peer review team member requirements for completeness and accuracy. \
+	 								 jobapplicationstep1.aspx">'.split()))
+	print kw
+	
+	kw = x.findSubstrings('_'.join('coordinate, prepare and facilitate requirements gathering sessions. </p>\r<p>Peer review team member requirements for completeness and accuracy. \
 	      </p>\r<p>Facilitate requirements prioritization sessions. </p>\r<p>Obtain approval and business sign-off on requirements. </p>\r<p>Integrate with SAP \
 	      Roll Out teams to provide Business and Customization Support for SAP warehouse applications and non SAP applications.</p>\r<p>&nbsp;</p>\r<p><b> \
 	      What you will Gain:</b> </p>\r<p>Full-time employment <b>&ldquo;direct hire"</b> with a well-established company in a great location! Competitive salary, \

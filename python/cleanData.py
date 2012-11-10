@@ -2,6 +2,7 @@ import csv
 #from time import sleep
 #from geopy import geocoders
 from collections import defaultdict as ddict
+from ahoCorasick import *
 
 
 '''
@@ -9,6 +10,7 @@ Some GlobalVariables:
 '''
 cityCode = {}						# The dict contains latitude & longitude information for each city
 cityJobs = {}						# This dict contains the number of jobs in each city used later for probability calc
+jobTitles = []
 
 '''
 This segment of code reads the zips.csv file which contains the latitude and longitude
@@ -21,7 +23,6 @@ cityCode['city'][0] == latitude of the city and
 cityCode['city'][1] == longitude of the city and 
 cityCode{} dictionary is used later in the file to map cities to the latitude and longitude.
 '''
-
 
 with open("/media/SHARE/NUS/JobRecoData_ForTesting/zips.csv", "r") as infile:
 	reader = csv.reader(infile, delimiter=',', 	quoting=csv.QUOTE_NONE,  quotechar='"', skipinitialspace = True)
@@ -39,7 +40,27 @@ with open("/media/SHARE/NUS/JobRecoData_ForTesting/zips.csv", "r") as infile:
 		cityJobs[city.lower()] = 0					# initializing number of jobs in each city to zero
 
 
+'''
+The following section of the code reads the job titles from jobTitles.txt and stores the values in 
+jobTitles list. 
+The job_seen is declared as a set. This is to ensure there is no duplication.
+'''
+job_seen = set()
+for line in open("/media/SHARE/NUS/JobRecoData_ForTesting/jobTitles.txt", "r"):
+    if line not in job_seen: 														# not a duplicate
+        outfile.write(line)
+        lines_seen.add(line)
 
+'''
+This super awesome line converts all spaces in the job titles read from the file into underscores.
+first list(job_seen) converts the set job_seen to list. Then for... iterates the list. "_".join()
+joins the words using the "_" character. w.split() splits each word on the boundary (demarcated 
+by space)!
+'''
+jobTitles = ["_".join(w.split()) for w in list(job_seen)]
+
+
+        
 op = open("/media/SHARE/NUS/JobRecoData_ForTesting/jobs_1.csv", 'wt')
 writer = csv.writer(op)
 
@@ -47,16 +68,22 @@ with open("/media/SHARE/NUS/JobRecoData/jobs1.tsv", "r") as infile:
 	reader = csv.reader(infile, delimiter="\t", 	quoting=csv.QUOTE_NONE, quotechar="")
 	# Skip the header line in the input file
 	reader.next()
-
+	# instantiate the ahoCorasick class. This is used to do the matching. Add all the job titles
+	# to the trie
+	kwMatch = ahoCorasick()
+	kwMatch.addKeyword(jobTitles)
+	
 	# Write a new header to the output file
-	writer.writerow(("JobId", "WindowId", "Title","City", "Latitude", "Longitude", "StartDate", "EndDate"))
+	writer.writerow(("JobId", "WindowId", "Title","Requirement","City", "Latitude", "Longitude", "StartDate", "EndDate"))
 	
 	for line in reader:
 		(Jobid, WindowId, Title, Description, Requirements, City, State, Country, Zip5, StartDate, EndDate) = line
 		if City.lower() not in cityCode.keys():
 			continue
-		#print Jobid, WindowId, Title.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate
-		#writer.writerow( (Jobid, WindowId, Title.lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate))
+		jobKeywords = kwMatch("_".join(Description.split()))
+		jobKeywords.union(kwMatch("_".join(Requirements.split())))
+		print Jobid, WindowId, Title.lower(), "|".join(list(jobKeywords)).lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate
+		writer.writerow( Jobid, WindowId, Title.lower(), "|".join(list(jobKeywords)).lower(), City.lower(), cityCode[City.lower()][0], cityCode[City.lower()][1], StartDate, EndDate)
 		cityJobs[City.lower()] = cityJobs[City.lower()] + 1 # increment the number of jobs in the particular city
 		
 		
